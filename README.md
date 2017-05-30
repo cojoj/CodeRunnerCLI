@@ -7,6 +7,7 @@ Wait no more! It's here and written in nothing else than Swift! 🙌
 
 This tool relies on:
 + Swift 3.1 with Swift Package Manager
++ macOS 10.11 or higher
 
 # Installing
 
