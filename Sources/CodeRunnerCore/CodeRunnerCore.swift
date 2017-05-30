@@ -1,12 +1,12 @@
 import Foundation
+import Files
+import ShellOut
 
 @available(OSX 10.11, *)
 public final class CommandLineTool {
+    private let fileSystem = FileSystem()
     private let arguments: [String]
-    
-    private var path: String {
-        return arguments[1]
-    }
+    private var path: String { return arguments[1] }
     
     public init(arguments: [String] = CommandLine.arguments) {
         self.arguments = arguments
@@ -14,23 +14,9 @@ public final class CommandLineTool {
     
     public func run() throws {
         do {
-            let kind = try itemKind(atPath: path)
-            
-            switch kind {
-            case .file:
-                print("We have file")
-            case .folder:
-                print("We have folder")
-            }
+            let createdFilePath = try fileSystem.createItem(at: path)
+            print(createdFilePath)
+            try shellOut(to: "open", arguments: ["-a CodeRunner", createdFilePath])
         }
-    }
-    
-    public func itemKind(atPath path: String) throws -> Kind {
-        guard let item = URL(string: path) else {
-            throw CLTError.cannotCreateURL(path: path)
-        }
-        
-        return item.hasDirectoryPath ? .folder : .file
     }
 }
-
