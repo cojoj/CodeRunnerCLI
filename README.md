@@ -41,7 +41,7 @@ If you want to open Code Runner in newly created directory, simply run:
 $ cr ~/path/to/some/dir/
 ```
 
-**CodeRunnerCLI** is able to resolve paths correctly, so you can use things like `~/`, `.` or `..`.
+**CodeRunnerCLI** is able to resolve paths correctly, so you can use things like `~/`, `.` or `..`. We're also taking care of existing files, so if you already have a file with this name in your file system, **CodeRunnerCLI** won't override it, but will just open it for you 😉
 
 # Everything else
 
