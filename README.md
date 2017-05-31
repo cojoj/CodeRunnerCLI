@@ -33,12 +33,12 @@ The most important feature of good code editing tool is possibility to open spec
 
 If you want to open Code Runner with file named `script.swift`, run:
 ```bash
-# cr swift.script
+$ cr swift.script
 ```
 
 If you want to open Code Runner in newly created directory, simply run:
 ```bash
-# cr ~/path/to/some/dir/
+$ cr ~/path/to/some/dir/
 ```
 
 **CodeRunnerCLI** is able to resolve paths correctly, so you can use things like `~/`, `.` or `..`.
