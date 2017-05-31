@@ -11,7 +11,8 @@ Wait no more! It's here and written in nothing else than Swift! 🙌
 
 This tool is for **macOS only**. To run it, make sure you have:
 + **Swift 3.1** (SPM)
-+ macOS 10.11 or higher
++ **macOS 10.11** or higher
++ **Git**
 
 # Installing
 
