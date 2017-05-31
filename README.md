@@ -21,7 +21,7 @@ To make it work you simply have to
 $ git clone https://github.com/cojoj/CodeRunnerCLI.git
 $ cd CodeRunnerCLI
 $ swift build -c release -Xswiftc -static-stdlib
-$ cp -f .build/release/Marathon /usr/local/bin/cr
+$ cp -f .build/release/CodeRunnerCLI /usr/local/bin/cr
 ```
 
 Form now on you have a `cr` command line tool available for your user.
