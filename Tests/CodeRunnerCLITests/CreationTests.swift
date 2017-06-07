@@ -25,6 +25,8 @@ class CreationTests: XCTestCase {
         super.tearDown()
     }
     
+    // MARK: File creation
+    
     func testCreatingFileWithExtension() throws {
         let fileName = "TestFile.md"
         let expectedPath = testFolder.path + fileName
@@ -33,6 +35,38 @@ class CreationTests: XCTestCase {
         XCTAssertNotNil(createdFilePath)
         XCTAssert(testFolder.containsFile(named: fileName))
         XCTAssert(createdFilePath == expectedPath)
+    }
+    
+    func testCreatingFileWithoutExtension() throws {
+        let fileName = "TestFile"
+        let expectedPath = testFolder.path + fileName
+        let createdFilePath = try fileSystem.createItem(at: fileName)
+        
+        XCTAssertNotNil(createdFilePath)
+        XCTAssert(testFolder.containsFile(named: fileName))
+        XCTAssert(createdFilePath == expectedPath)
+    }
+    
+    func testCreatingFileInSubfolder() throws {
+        let filePath = "sub1/sub2/TestFile.md"
+        let expectedPath = testFolder.path + filePath
+        let createdFilePath = try fileSystem.createItem(at: filePath)
+        
+        XCTAssertNotNil(createdFilePath)
+        XCTAssert(testFolder.containsFile(named: filePath))
+        XCTAssert(createdFilePath == expectedPath)
+    }
+    
+    // MARK: Folder creation
+    
+    func testCreatingFolder() throws {
+        let folderPath = "SomeFolder/"
+        let expectedPath = testFolder.path + folderPath
+        let createdFolderPath = try fileSystem.createItem(at: folderPath)
+        
+        XCTAssertNotNil(createdFolderPath)
+        XCTAssert(testFolder.containsSubfolder(named: folderPath))
+        XCTAssert(createdFolderPath == expectedPath)
     }
     
 }
