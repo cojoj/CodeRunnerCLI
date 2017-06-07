@@ -1,5 +1,7 @@
 # CodeRunnerCLI
 
+[![GitHub release](https://img.shields.io/github/release/cojoj/CodeRunnerCLI.svg)](https://github.com/cojoj/CodeRunnerCLI/releases/latests)
+
 I won't be advertising here for [CodeRunner 2](https://coderunnerapp.com), but it's a great app! 😅
 It's a compromise between bloated IDEs and simple text editors. What's the biggest advantage is that it supports a lot of different programming languages out of the box, so you can jump in and make something useful without fighting with additional dependencies etc. Don't forget it's a native app, so no more struggle with Electron 😜
 
