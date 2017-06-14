@@ -1,25 +1,18 @@
-//
-//  CodeRunnerCLI
-//
-//  Copyright (c) Mateusz Zając 2017
-//  Licensed under the MIT license. See LICENSE file.
-//
+// swift-tools-version:4.0
+// The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-    name: "CodeRunnerCLI",
-    targets: [
-        Target(
-            name: "CodeRunnerCLI",
-            dependencies: ["CodeRunnerCore"]
-        ),
-        Target(name: "CodeRunnerCore")
-    ],
+    name: "CodeRunner",
     dependencies: [
-        // Be sure to change this one to original repository once new version is released
-        .Package(url: "https://github.com/cojoj/Files.git", majorVersion: 1),
-        .Package(url: "https://github.com/JohnSundell/ShellOut.git", majorVersion: 1),
-        .Package(url: "https://github.com/JohnSundell/Require.git", majorVersion: 1)
-    ]
+        .package(url: "https://github.com/JohnSundell/Files", from: "1.9.0"),
+        .package(url: "https://github.com/JohnSundell/ShellOut", from: "1.0.0"),
+        .package(url: "https://github.com/JohnSundell/Require", from: "1.0.0")
+    ],
+    targets: [
+        .target(name: "CodeRunnerCore", dependencies: ["Files", "ShellOut", "Require"]),
+        .testTarget(name: "CodeRunnerTests", dependencies: ["CodeRunnerCore"])
+    ],
+    swiftLanguageVersions: [3, 4]
 )
