@@ -1,7 +1,8 @@
 # CodeRunnerCLI
 
-[![Swift](https://img.shields.io/badge/Swift-3.2-lightgrey.svg)](https://swift.org)
-[![SPM](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://swift.org/package-manager)
+[![Swift](https://img.shields.io/badge/Swift-4.0-brightgreen.svg)](https://swift.org)
+[![SPM](https://img.shields.io/badge/SPM-v4-brightgreen.svg)](https://swift.org/package-manager)
+![OS](https://img.shields.io/badge/compatible-macOS%2010.11-lightgrey.svg)
 [![GitHub release](https://img.shields.io/github/release/cojoj/CodeRunnerCLI.svg)](https://github.com/cojoj/CodeRunnerCLI/releases/latest)
 
 I won't be advertising here for [CodeRunner 2](https://coderunnerapp.com), but it's a great app! 😅
@@ -14,7 +15,7 @@ Wait no more! It's here and written in nothing else, but **Swift**! 🙌
 # Requirements
 
 This tool is for **macOS only**. To run it, make sure you have:
-+ **Swift 3.2** (SPM)
++ **Swift 4.0** (SPM v4)
 + **macOS 10.11** or higher
 + **Git**
 
