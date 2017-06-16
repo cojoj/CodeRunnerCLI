@@ -63,5 +63,5 @@ If you're planning to use the first option, just use command like `swift build` 
 
 + Created with ❤️ by [@cojoj](https://twitter.com/cojoj)
 + Project is realeased under [MIT license](LICENSE.md)
-+ Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md)
++ Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md)
 + **Issues** and **Pull Requests** are more than welcome! 🌸
