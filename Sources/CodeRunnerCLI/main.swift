@@ -9,7 +9,6 @@ import CodeRunnerCore
 
 if #available(OSX 10.11, *) {
     let tool = CommandLineTool()
-    
     do {
         try tool.run()
     } catch {
