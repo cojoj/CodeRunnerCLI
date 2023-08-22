@@ -18,6 +18,5 @@ public enum Kind {
 
 public enum CLTError: Error {
     case cannotCreateURL(path: String)
-    case missingFileName
-    case failedToCreateFile
+    case missingPath
 }

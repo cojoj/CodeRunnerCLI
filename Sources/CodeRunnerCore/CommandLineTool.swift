@@ -14,15 +14,16 @@ public final class CommandLineTool {
     private let fileSystem = FileSystem()
     private let arguments: [String]
     private var path: String { return arguments[1] }
-    
     public init(arguments: [String] = CommandLine.arguments) {
         self.arguments = arguments
     }
     
     public func run() throws {
         do {
+            if arguments.count == 1 {
+                throw CLTError.missingPath
+            }
             let createdFilePath = try fileSystem.createItem(at: path)
-            print(createdFilePath)
             try shellOut(to: "open", arguments: ["-a CodeRunner", createdFilePath])
         }
     }
